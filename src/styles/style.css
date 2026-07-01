@@ -1,0 +1,266 @@
+:root {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f4f6;
+}
+
+.app-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-panel {
+    width: 100%;
+    max-width: 1400px;
+    background: #f4f6f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.control-title {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+    align-items: flex-end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.input-file {
+    padding: 8px;
+    background: #fff;
+}
+
+.data-summary {
+    background: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.data-label {
+    color: #7f8c8d;
+}
+
+.print-button {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.print-sheet {
+    width: calc(100vw - 80px);
+    max-width: 1400px;
+    aspect-ratio: 45 / 32;
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+    direction: ltr;
+    overflow: hidden;
+}
+
+.label-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.label-card {
+    border: 1px dashed #cccccc;
+    box-sizing: border-box;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.label-number {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.label-main {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+}
+
+.label-left {
+    width: 45%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.label-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label-name {
+    font-size: 1.05rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    min-height: 44px;
+}
+
+.note-box {
+    flex: 1;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.95rem;
+    min-height: 100px;
+}
+
+.label-footer {
+    margin-top: auto;
+    border-top: 1px dashed #333;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.label-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-placeholder {
+    color: #95a5a6;
+    font-size: 0.95rem;
+    padding: 8px;
+}
+
+.quantity-box {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    border: 2px solid #000;
+    padding: 0 12px;
+    border-radius: 6px;
+}
+
+.quantity-label {
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.quantity-box {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #000;
+    border: 2px solid #000;
+    padding: 0 4mm;
+    border-radius: 4px;
+}
+
+.quantity-unit {
+    font-size: 10pt;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .app-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+    }
+
+    .print-sheet {
+        width: 450mm !important;
+        height: 320mm !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+
+    @page {
+        size: 450mm 320mm;
+        margin: 0;
+    }
+}
