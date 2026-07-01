@@ -35,12 +35,23 @@ body {
     padding-bottom: 10px;
 }
 
-.input-grid {
+.input-grid,
+.input-grid-3,
+.input-grid-4 {
     display: grid;
-    grid-template-columns: repeat(5, minmax(220px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 30px;
     margin-bottom: 18px;
     align-items: flex-end;
+}
+
+.input-grid-3 {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+
+.input-grid-4 {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
 }
 
 .input-group {
@@ -110,14 +121,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    gap: 10mm;
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
 .label-card {
-    border: 1px dashed #cccccc;
+    border: 4px solid #000000;
     box-sizing: border-box;
     padding: 12px;
     display: flex;
@@ -162,30 +173,30 @@ body {
 }
 
 .label-name {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2;
-    text-align: left;
-    min-height: 44px;
+    text-align: center;
+    min-height: 100px;
 }
 
 .note-box {
-    flex: 1;
+    flex: 1 1;
     border: 1px solid #000;
     border-radius: 8px;
-    padding: 12px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.95rem;
-    min-height: 100px;
+    font-size: 0.9rem;
+    max-height: 30px;
 }
 
 .label-footer {
     margin-top: auto;
-    border-top: 1px dashed #333;
-    padding-top: 10px;
+    /* border-top: 1px dashed #333; */
+    padding-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -205,12 +216,15 @@ body {
 }
 
 .quantity-box {
-    font-size: 1rem;
+    font-size: 16pt;
     font-weight: bold;
     color: #000;
-    border: 2px solid #000;
-    padding: 0 12px;
-    border-radius: 6px;
+    border-bottom: 1px solid #000;
+    padding: 0 4mm;
+    width: 60px;
+    height: 25px;
+    display: flex;
+    text-align: center;
 }
 
 .quantity-label {
@@ -218,17 +232,14 @@ body {
     font-weight: bold;
 }
 
-.quantity-box {
-    font-size: 20pt;
-    font-weight: bold;
-    color: #000;
-    border: 2px solid #000;
-    padding: 0 4mm;
-    border-radius: 4px;
-}
 
 .quantity-unit {
     font-size: 10pt;
+}
+
+.version {
+    font-size: 0.5rem;
+    margin-top: 2px;
 }
 
 @media print {
@@ -255,8 +266,10 @@ body {
         height: 320mm !important;
         box-shadow: none !important;
         margin: 0 !important;
+        padding: 10mm !important;
         page-break-inside: avoid;
-        page-break-after: always;
+        page-break-after: avoid;
+        max-width: none !important;
     }
 
     @page {

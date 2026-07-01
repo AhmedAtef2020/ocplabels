@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Confetti from 'js-confetti'
 import './styles/style.css'
-import LabelsPrinter from "./LabelsPrinter"
+import LabelsPrinter from "./Features/LabelsPrinter"
 
 const confetti = new Confetti()
 
