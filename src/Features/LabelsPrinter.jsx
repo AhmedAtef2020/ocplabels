@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function LabelsPrinter() {
   const [jobData, setJobData] = useState({
-    jobNumber: '',
-    jobName: '',
-    notes: '',
-    quantity: '',
-    quantityType: 'PCS'
+    jobNumber: "",
+    jobName: "",
+    notes: "",
+    quantity: "",
+    quantityType: "PCS",
   });
 
   const [imageSrc, setImageSrc] = useState(null);
@@ -41,21 +41,31 @@ export default function LabelsPrinter() {
               className="input-field"
               type="text"
               value={jobData.jobNumber}
-              onChange={(e) => setJobData({ ...jobData, jobNumber: e.target.value })}
+              onChange={(e) =>
+                setJobData({ ...jobData, jobNumber: e.target.value })
+              }
               placeholder="Enter job number max 40 characters"
               maxlength="40"
             />
           </div>
 
           <div className="input-group">
-            <label className="input-label">Job Name<span style={{ color: '#7f8c8d', fontSize: '0.7em' }}> (in Arabic)</span></label>
+            <label className="input-label">
+              Job Name
+              <span style={{ color: "#7f8c8d", fontSize: "0.7em" }}>
+                {" "}
+                (in Arabic)
+              </span>
+            </label>
             <input
               className="input-field"
               type="text"
               value={jobData.jobName}
-              onChange={(e) => setJobData({ ...jobData, jobName: e.target.value })}
+              onChange={(e) =>
+                setJobData({ ...jobData, jobName: e.target.value })
+              }
               placeholder="Enter job name"
-            // maxlength="40"
+              // maxlength="40"
             />
           </div>
         </div>
@@ -67,7 +77,9 @@ export default function LabelsPrinter() {
               className="input-field"
               type="text"
               value={jobData.notes}
-              onChange={(e) => setJobData({ ...jobData, notes: e.target.value })}
+              onChange={(e) =>
+                setJobData({ ...jobData, notes: e.target.value })
+              }
               placeholder="Enter notes"
             />
           </div>
@@ -78,19 +90,22 @@ export default function LabelsPrinter() {
               className="input-field"
               type="text"
               value={jobData.quantity}
-              onChange={(e) => setJobData({ ...jobData, quantity: e.target.value })}
+              onChange={(e) =>
+                setJobData({ ...jobData, quantity: e.target.value })
+              }
               placeholder="Enter quantity"
               maxlength="4"
             />
           </div>
 
           <div className="input-group">
-
             <label className="input-label">PCS | PKT</label>
             <select
               className="input-field"
               value={jobData.quantityType}
-              onChange={(e) => setJobData({ ...jobData, quantityType: e.target.value })}
+              onChange={(e) =>
+                setJobData({ ...jobData, quantityType: e.target.value })
+              }
             >
               <option value="PCS">PCS</option>
               <option value="PKT">PKT</option>
@@ -111,11 +126,15 @@ export default function LabelsPrinter() {
         <div className="data-summary">
           <strong>Current label data:</strong>
           <br />
-          <span className="data-label">Job Number:</span> {jobData.jobNumber || '---'} |
-          <span className="data-label"> Job Name:</span> {jobData.jobName || '---'} |
-          <span className="data-label"> Notes:</span> {jobData.notes || '---'} |
-          <span className="data-label"> Quantity:</span> {jobData.quantity || '---'} |
-          <span className="data-label"> Quantity Type:</span> {jobData.quantityType || '---'}
+          <span className="data-label">Job Number:</span>{" "}
+          {jobData.jobNumber || "---"} |
+          <span className="data-label"> Job Name:</span>{" "}
+          {jobData.jobName || "---"} |
+          <span className="data-label"> Notes:</span> {jobData.notes || "---"} |
+          <span className="data-label"> Quantity:</span>{" "}
+          {jobData.quantity || "---"} |
+          <span className="data-label"> Quantity Type:</span>{" "}
+          {jobData.quantityType || "---"}
         </div>
 
         <button className="print-button" onClick={handlePrint}>
@@ -128,7 +147,7 @@ export default function LabelsPrinter() {
           {[...Array(9)].map((_, index) => (
             <div key={index} className="label-card">
               <div className="label-number">
-                {jobData.jobNumber || 'No-JOB'}
+                {jobData.jobNumber || "No-JOB"}
               </div>
 
               <div className="label-main">
@@ -137,23 +156,26 @@ export default function LabelsPrinter() {
                     <img className="label-image" src={imageSrc} alt="Job" />
                   ) : (
                     <span className="image-placeholder">[Job Image]</span>
-
                   )}
                 </div>
 
                 <div className="label-right">
-                  <div className="label-name">{jobData.jobName || 'Job Name'}</div>
+                  <div className="label-name">
+                    {jobData.jobName || "------"}
+                  </div>
 
-                  <div className="note-box">
-                    {jobData.notes || 'Notes'}
+                  <div className={jobData.notes ? "note-box" : "hidden"}>
+                    {jobData.notes}
                   </div>
 
                   <div className="label-footer">
                     <span className="quantity-label">Qty:</span>
                     <span className="quantity-box">
-                      {jobData.quantity || ''}
+                      {jobData.quantity || ""}
                     </span>
-                    <span className="quantity-unit">{jobData.quantityType}</span>
+                    <span className="quantity-unit">
+                      {jobData.quantityType}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -162,7 +184,9 @@ export default function LabelsPrinter() {
           ))}
         </div>
       </div>
+      <div className="control-panel no-print">
+        <p className="copy-right">by Ahmed Atef - OCP-129535</p>
+      </div>
     </div>
   );
 }
-

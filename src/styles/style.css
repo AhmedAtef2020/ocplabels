@@ -1,279 +1,302 @@
 :root {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  background: #f3f4f6;
+}
+
+.hidden {
+  display: none;
 }
 
 .app-container {
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .control-panel {
-    width: 100%;
-    max-width: 1400px;
-    background: #f4f6f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1400px;
+  background: #f4f6f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .control-title {
-    margin-top: 0;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
 }
 
 .input-grid,
 .input-grid-3,
 .input-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 30px;
-    margin-bottom: 18px;
-    align-items: flex-end;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 18px;
+  align-items: flex-end;
 }
 
 .input-grid-3 {
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
 }
 
-
 .input-grid-4 {
-    grid-template-columns: repeat(4, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .input-field {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .input-file {
-    padding: 8px;
-    background: #fff;
+  padding: 8px;
+  background: #fff;
 }
 
 .data-summary {
-    background: #fff;
-    padding: 12px;
-    border-radius: 4px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 15px;
-    font-size: 14px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .data-label {
-    color: #7f8c8d;
+  color: #7f8c8d;
 }
 
 .print-button {
-    background: #27ae60;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
 }
 
 .print-sheet {
-    width: calc(100vw - 80px);
-    max-width: 1400px;
-    aspect-ratio: 45 / 32;
-    background-color: #ffffff;
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
-    padding: 20px;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-    direction: ltr;
-    overflow: hidden;
+  width: calc(100vw - 80px);
+  max-width: 1400px;
+  aspect-ratio: 45 / 32;
+  background-color: #ffffff;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  direction: ltr;
+  overflow: hidden;
 }
 
 .label-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap: 10mm;
-    width: 100%;
-    height: 100%;
-    margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 10mm;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .label-card {
-    border: 4px solid #000000;
-    box-sizing: border-box;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .label-number {
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #000;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #000;
 }
 
 .label-main {
-    display: flex;
-    gap: 12px;
-    flex: 1;
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  height: 80%;
 }
 
 .label-left {
-    width: 45%;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    min-height: 180px;
+  width: 45%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 180px;
+  min-height: 180px;
 }
 
 .label-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .label-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;
-    min-height: 100px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  min-height: 60%;
 }
 
 .note-box {
-    flex: 1 1;
-    border: 1px solid #000;
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.9rem;
-    max-height: 30px;
+  flex: 1 1;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  max-height: 30px;
 }
 
 .label-footer {
-    margin-top: auto;
-    /* border-top: 1px dashed #333; */
-    padding-top: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  margin-top: auto;
+  /* border-top: 1px dashed #333; */
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .label-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .image-placeholder {
-    color: #95a5a6;
-    font-size: 0.95rem;
-    padding: 8px;
+  color: #95a5a6;
+  font-size: 0.95rem;
+  padding: 8px;
 }
 
 .quantity-box {
-    font-size: 16pt;
-    font-weight: bold;
-    color: #000;
-    border-bottom: 1px solid #000;
-    padding: 0 4mm;
-    width: 60px;
-    height: 25px;
-    display: flex;
-    text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding: 0 4mm;
+  width: 60px;
+  height: 25px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .quantity-label {
-    font-size: 11pt;
-    font-weight: bold;
+  font-size: 11pt;
+  font-weight: bold;
 }
 
-
 .quantity-unit {
-    font-size: 10pt;
+  font-size: 10pt;
 }
 
 .version {
-    font-size: 0.5rem;
-    margin-top: 2px;
+  font-size: 0.5rem;
+  margin-top: 2px;
+}
+
+.copy-right {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 @media print {
-    body {
-        margin: 0;
-        padding: 0;
-        background: none;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-    .no-print {
-        display: none !important;
-    }
+  .no-print {
+    display: none !important;
+  }
 
-    .app-container {
-        padding: 0 !important;
-        margin: 0 !important;
-        max-width: none !important;
-    }
+  .app-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
 
-    .print-sheet {
-        width: 450mm !important;
-        height: 320mm !important;
-        box-shadow: none !important;
-        margin: 0 !important;
-        padding: 10mm !important;
-        page-break-inside: avoid;
-        page-break-after: avoid;
-        max-width: none !important;
-    }
+  .print-sheet {
+    width: 450mm !important;
+    height: 320mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 10mm !important;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    max-width: none !important;
+  }
 
-    @page {
-        size: 450mm 320mm;
-        margin: 0;
-    }
+  .label-left {
+    min-height: 75mm;
+  }
+
+  .label-name {
+    font-size: 2rem;
+  }
+
+  .label-number {
+    font-size: 1.3rem;
+  }
+
+  @page {
+    size: 450mm 320mm;
+    margin: 0;
+  }
 }
